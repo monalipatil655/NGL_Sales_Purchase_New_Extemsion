@@ -7,6 +7,8 @@ page 50117 "Proof of Export"
     SourceTable = 113;
     SourceTableView = WHERE("Proof of Export" = FILTER(true),
                            "GST Group Code" = FILTER('GST 0.1%'));
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

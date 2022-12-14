@@ -75,6 +75,11 @@ tableextension 50020 Customer_ext extends Customer
                 //PCPLTDS194Q
             end;
         }
+        field(50107; "No Payment Remainder"; Boolean)
+        {
+            Description = 'PCPL-25';
+            Enabled = true;
+        }
         field(33000990; "Free Trade Zone"; Boolean)
         {
             Description = 'GITLExim';

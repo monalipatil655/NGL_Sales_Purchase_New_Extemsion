@@ -8,6 +8,8 @@ page 50101 "Forward Commission List"
     SourceTableView = SORTING("Entry No.", "Forward No.")
                       ORDER(Ascending)
                       WHERE(Select = CONST(false));
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {

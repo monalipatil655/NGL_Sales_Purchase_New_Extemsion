@@ -4,6 +4,8 @@ page 50068 "Payment Terms PortalUse"
 
     PageType = List;
     SourceTable = 50068;
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {

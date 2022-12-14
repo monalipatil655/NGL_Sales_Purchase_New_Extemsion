@@ -3,6 +3,8 @@ page 50063 "Manufacturer Details"
     Caption = 'Manufacturer Details';
     PageType = List;
     SourceTable = 50029;
+    ApplicationArea = all;
+    UsageCategory = Lists;
 
     layout
     {

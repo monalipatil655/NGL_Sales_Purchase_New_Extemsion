@@ -1,4 +1,4 @@
-dotnet
+/*dotnet
 {
     assembly(Microsoft.Dynamics.Nav.MX)
     {
@@ -13,6 +13,7 @@ dotnet
 
 
     }
-    
-    
+
+
 }
+*/

@@ -12,35 +12,35 @@ pageextension 50028 Posted_Purcase_Receipt extends "Posted Purchase Receipt"
     {
 
         // addafter("&Print")
+        //{
+        // action("Goods Receipts Note")
         // {
-        //     action("Goods Receipts Note")
-        //     {
-        //         Caption = 'Goods Receipts Note1';
-        //         Enabled = false;
-        //         Image = Print;
-        //         // RunObject = Report 50000; //NSW07
-        //         Visible = false;
-        //         ApplicationArea = all;
+        //     Caption = 'Goods Receipts Note1';
+        //     Enabled = false;
+        //     Image = Print;
+        //     //RunObject = Report 50000; //NSW07
+        //     Visible = false;
+        //     ApplicationArea = all;
 
-        //         trigger OnAction();
-        //         begin
+        //     trigger OnAction();
+        //     begin
 
-        //             PurchRcptHeader.RESET;
-        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", "No.");
-        //             IF PurchRcptHeader.FINDFIRST THEN
-        //                 PurchRcptLine.RESET;
-        //             PurchRcptLine.SETRANGE(PurchRcptLine."Document No.", PurchRcptHeader."No.");
-        //             PurchRcptLine.SETFILTER(PurchRcptLine."No.", '<>%1', '');
+        //         PurchRcptHeader.RESET;
+        //         PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", Rec."No.");
+        //         IF PurchRcptHeader.FINDFIRST THEN
+        //             PurchRcptLine.RESET;
+        //         PurchRcptLine.SETRANGE(PurchRcptLine."Document No.", PurchRcptHeader."No.");
+        //         PurchRcptLine.SETFILTER(PurchRcptLine."No.", '<>%1', '');
 
-        //             //Given below code comment by sanjay for multiple line grn allow.    15/07/2015
+        //         //Given below code comment by sanjay for multiple line grn allow.    15/07/2015
 
-        //             // IF PurchRcptLine.COUNT > 1 THEN
-        //             //   ERROR('ITEM CONTAINS MORE THAN ONE')
-        //             //  ELSE
+        //         // IF PurchRcptLine.COUNT > 1 THEN
+        //         //   ERROR('ITEM CONTAINS MORE THAN ONE')
+        //         //  ELSE
 
-        //             // REPORT.RUNMODAL(REPORT::"Goods Receipts Note-KAR",TRUE,TRUE,PurchRcptHeader);
-        //         end;
-        //     }
+        //         // REPORT.RUNMODAL(REPORT::"Goods Receipts Note-KAR",TRUE,TRUE,PurchRcptHeader);
+        //     end;
+        // }
         //     action("<Action50>")
         //     {
         //         Caption = 'GRN- Engineering';
@@ -48,7 +48,7 @@ pageextension 50028 Posted_Purcase_Receipt extends "Posted Purchase Receipt"
         //         trigger OnAction();
         //         begin
         //             PurchRcptHeader.RESET;
-        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", "No.");
+        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", Rec."No.");
         //             IF PurchRcptHeader.FINDFIRST THEN BEGIN
         //                 REPORT.RUNMODAL(50012, TRUE, FALSE, PurchRcptHeader);
         //             END
@@ -65,7 +65,7 @@ pageextension 50028 Posted_Purcase_Receipt extends "Posted Purchase Receipt"
         //         trigger OnAction();
         //         begin
         //             PurchRcptHeader.RESET;
-        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", "No.");
+        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", Rec."No.");
         //             IF PurchRcptHeader.FINDFIRST THEN
         //                 REPORT.RUNMODAL(50027, TRUE, FALSE, PurchRcptHeader);
         //         end;
@@ -82,7 +82,7 @@ pageextension 50028 Posted_Purcase_Receipt extends "Posted Purchase Receipt"
         //               REPORT.RUNMODAL(50050,TRUE,FALSE,PurchRcptHeader);
         //             END;*/
         //             PurchRcptHeader.RESET;
-        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", "No.");
+        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", Rec."No.");
         //             IF PurchRcptHeader.FINDFIRST THEN BEGIN
         //                 PurchRcptLine.RESET;
         //                 PurchRcptLine.SETRANGE(PurchRcptLine."Document No.", PurchRcptHeader."No.");
@@ -100,7 +100,7 @@ pageextension 50028 Posted_Purcase_Receipt extends "Posted Purchase Receipt"
         //         trigger OnAction();
         //         begin
         //             PurchRcptHeader.RESET;
-        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", "No.");
+        //             PurchRcptHeader.SETRANGE(PurchRcptHeader."No.", Rec."No.");
         //             IF PurchRcptHeader.FINDFIRST THEN BEGIN
         //                 ILE.RESET;
         //                 ILE.SETRANGE(ILE."Document No.", PurchRcptHeader."No.");

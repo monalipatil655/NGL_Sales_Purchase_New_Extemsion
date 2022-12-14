@@ -5,6 +5,8 @@ page 50060 "Purchase Line List"
     SourceTable = 39;
     SourceTableView = WHERE("Document Type" = FILTER(Order),
                             Type = FILTER(<> "G/L Account"));
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {

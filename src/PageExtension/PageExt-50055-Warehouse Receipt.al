@@ -5,6 +5,10 @@ pageextension 50055 Warehouse_receipt extends "Warehouse Receipt"
     layout
     {
 
+        modify("Document Status")
+        {
+            Editable = true;
+        }
         addafter("Sorting Method")
         {
             field("Manufacturing Date"; rec."Manufacturing Date")
@@ -27,7 +31,9 @@ pageextension 50055 Warehouse_receipt extends "Warehouse Receipt"
             {
                 ApplicationArea = all;
             }
+
         }
+
     }
     actions
     {

@@ -24,12 +24,18 @@ pageextension 50006 Customer_Card extends "Customer Card"
             {
                 ApplicationArea = all;
             }
-            field("Balance Approval Mail"; rec."Balance Approval Mail")
+            field("Incoming Document Entry No."; rec."Incoming Document Entry No.")
             {
                 ApplicationArea = all;
             }
-
-            field("Incoming Document Entry No."; rec."Incoming Document Entry No.")
+            field("No Payment Remainder"; Rec."No Payment Remainder")
+            {
+                ApplicationArea = all;
+            }
+        }
+        addafter("ARN No.")
+        {
+            field("Balance Approval Mail"; rec."Balance Approval Mail")
             {
                 ApplicationArea = all;
             }

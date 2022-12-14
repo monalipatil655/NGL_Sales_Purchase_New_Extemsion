@@ -38,15 +38,22 @@ pageextension 50013 Item_led_Entry extends "Item Ledger Entries"
             {
                 ApplicationArea = all;
             }
+            field("QC Status"; Rec."QC Status")
+            {
+                ApplicationArea = All;
+            }
+            field("QC Retest Date"; Rec."QC Retest Date")
+            {
+                ApplicationArea = All;
+            }
+
 
         }
     }
     actions
     {
 
-
     }
-
 
 
 }

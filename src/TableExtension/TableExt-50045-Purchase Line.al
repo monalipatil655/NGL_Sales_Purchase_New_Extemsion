@@ -24,6 +24,24 @@ tableextension 50045 tableextension50296 extends "Purchase Line"
         {
             CaptionML = ENU = 'Delivery Challan Date';
         }
+        //PCPL-25/120722
+        modify("TDS Section Code")
+        {
+            trigger OnAfterValidate()
+            var
+                AllowedSec: Record 18687;
+            begin
+                if "TDS Section Code" <> '' then begin
+                    AllowedSec.Reset();
+                    AllowedSec.SetRange("Vendor No", "Pay-to Vendor No.");
+                    AllowedSec.SetRange("TDS Section", "TDS Section Code");
+                    if not AllowedSec.FindFirst() then
+                        Error('TDS Section Code not available in allowed section');
+                end;
+
+            end;
+        }
+        //PCPL-25/120722
 
         modify("No.")
         {

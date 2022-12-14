@@ -26,7 +26,7 @@ tableextension 50081 WareHouse_recipt_hdr extends "Warehouse Receipt Header"
                         ENN = 'Manufacturer Address';
             Description = 'sanjay 07/July/2015';
         }
-       
+
         field(50006; Desctripation; Text[100])
         {
             CalcFormula = Lookup("Warehouse Receipt Line".Description WHERE("No." = FIELD("No.")));
@@ -39,7 +39,7 @@ tableextension 50081 WareHouse_recipt_hdr extends "Warehouse Receipt Header"
             Description = 'sanjay 19/08/2015';
             FieldClass = FlowField;
         }
-      
+
     }
     trigger OnAfterDelete()
     Begin

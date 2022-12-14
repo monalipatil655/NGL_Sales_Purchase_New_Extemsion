@@ -34,7 +34,7 @@ pageextension 50054 Posted_Transfer_Receipt extends "Posted Transfer Receipt"
         //         trigger OnAction();
         //         begin
         //             PostedTR.RESET;
-        //             PostedTR.SETRANGE(PostedTR."No.", "No.");
+        //             PostedTR.SETRANGE(PostedTR."No.", Rec."No.");
         //             IF PostedTR.FINDFIRST THEN
         //                 REPORT.RUNMODAL(50147, TRUE, FALSE, PostedTR);
         //         end;
@@ -46,7 +46,7 @@ pageextension 50054 Posted_Transfer_Receipt extends "Posted Transfer Receipt"
         //         begin
         //             //PCPL-25
         //             TransRcptHeader.RESET;
-        //             TransRcptHeader.SETRANGE(TransRcptHeader."No.", "No.");
+        //             TransRcptHeader.SETRANGE(TransRcptHeader."No.", Rec."No.");
         //             IF TransRcptHeader.FINDFIRST THEN BEGIN
         //                 REPORT.RUNMODAL(50079, TRUE, TRUE, TransRcptHeader);
         //             END;
@@ -70,7 +70,7 @@ pageextension 50054 Posted_Transfer_Receipt extends "Posted Transfer Receipt"
         //         trigger OnAction();
         //         begin
         //             TransferReceiptHeader.RESET;
-        //             TransferReceiptHeader.SETRANGE(TransferReceiptHeader."No.", "No.");
+        //             TransferReceiptHeader.SETRANGE(TransferReceiptHeader."No.", Rec."No.");
         //             IF TransferReceiptHeader.FINDFIRST THEN BEGIN
         //                 ILE.RESET;
         //                 ILE.SETRANGE(ILE."Document No.", TransferReceiptHeader."No.");
@@ -80,23 +80,23 @@ pageextension 50054 Posted_Transfer_Receipt extends "Posted Transfer Receipt"
         //             END;
         //         end;
         //     }
-        //     action("Transfer Status Label")
-        //     {
-        //         Caption = 'Transfer Status Label';
+        //     // action("Transfer Status Label")
+        //     // {
+        //     //     Caption = 'Transfer Status Label';
 
-        //         trigger OnAction();
-        //         begin
-        //             TransferReceiptHeader.RESET;
-        //             TransferReceiptHeader.SETRANGE(TransferReceiptHeader."No.", "No.");
-        //             IF TransferReceiptHeader.FINDFIRST THEN BEGIN
-        //                 TransferReceiptLine.RESET;
-        //                 TransferReceiptLine.SETRANGE(TransferReceiptLine."Document No.", TransferReceiptHeader."No.");
-        //                 IF TransferReceiptLine.FINDFIRST THEN BEGIN
-        //                     REPORT.RUNMODAL(50054, TRUE, FALSE, TransferReceiptLine);
-        //                 END;
-        //             END;
-        //         end;
-        //     }
+        //     //     trigger OnAction();
+        //     //     begin
+        //     //         TransferReceiptHeader.RESET;
+        //     //         TransferReceiptHeader.SETRANGE(TransferReceiptHeader."No.", Rec."No.");
+        //     //         IF TransferReceiptHeader.FINDFIRST THEN BEGIN
+        //     //             TransferReceiptLine.RESET;
+        //     //             TransferReceiptLine.SETRANGE(TransferReceiptLine."Document No.", TransferReceiptHeader."No.");
+        //     //             IF TransferReceiptLine.FINDFIRST THEN BEGIN
+        //     //                 REPORT.RUNMODAL(50054, TRUE, FALSE, TransferReceiptLine);
+        //     //             END;
+        //     //         END;
+        //     //     end;
+        //     // }
         // }
     }
 

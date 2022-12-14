@@ -4,9 +4,21 @@ pageextension 50025 User_setup extends "User Setup"
 
     layout
     {
+        addafter("Allow Posting To")
+        {
+            field("Allow FA Posting From"; Rec."Allow FA Posting From")
+            {
+                ApplicationArea = All;
+            }
+            field("Allow FA Posting To"; Rec."Allow FA Posting To")
+            {
+                ApplicationArea = All;
+            }
+        }
 
         addafter("Register Time")
         {
+
             field("E-Mail"; rec."E-Mail")
             {
                 ApplicationArea = all;

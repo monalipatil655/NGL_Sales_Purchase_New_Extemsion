@@ -8,7 +8,7 @@ tableextension 50022 Item_led_ent_ext extends "Item Ledger Entry"
         {
             Description = 'PCPL/BRB';
         }
-       
+
         field(50102; "Packing Size"; Code[30])
         {
             Description = 'KAR1.0';
