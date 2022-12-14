@@ -76,7 +76,7 @@ page 50112 "Job Component Card"
             }
         }
     }
-
+    //
     actions
     {
     }
