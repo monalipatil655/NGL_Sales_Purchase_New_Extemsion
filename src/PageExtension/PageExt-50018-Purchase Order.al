@@ -149,6 +149,7 @@ pageextension 50018 Purchase_order_Ext extends "Purchase Order"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
+                ApplicationArea = all;
 
                 trigger OnAction();
                 var

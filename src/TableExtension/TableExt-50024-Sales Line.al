@@ -31,6 +31,11 @@ tableextension 50024 Sales_Line extends "Sales Line"
         {
             Description = 'PCPL50';
         }
+        field(50109; "Remark from Factory"; text[30])
+        {
+            Description = 'PCPL-25';
+        }
+
     }
 
     var
