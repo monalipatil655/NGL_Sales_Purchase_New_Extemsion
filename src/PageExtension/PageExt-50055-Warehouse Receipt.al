@@ -31,6 +31,10 @@ pageextension 50055 Warehouse_receipt extends "Warehouse Receipt"
             {
                 ApplicationArea = all;
             }
+            // field("Vendor Shipment Date/BOL"; rec."Vendor Shipment Date")
+            // {
+            //     ApplicationArea = all;
+            // }          
 
         }
 
